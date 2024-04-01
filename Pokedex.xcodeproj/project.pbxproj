@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CE2BAC042BBAF0CF002042C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */; };
+		CE2BAC092BBAF351002042C0 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC082BBAF351002042C0 /* AppSidebarList.swift */; };
+		CE2BAC0C2BBAF40F002042C0 /* PokedexKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2BAC0B2BBAF40F002042C0 /* PokedexKit */; };
+		CE2BAC0E2BBAF49E002042C0 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC0D2BBAF49E002042C0 /* AppDetailColumn.swift */; };
 		CECB59932AF77F9F00847D5F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CECB59922AF77F9F00847D5F /* ComposableArchitecture */; };
 		CECB59962AF7804500847D5F /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = CECB59952AF7804500847D5F /* PokemonAPI */; };
 		CEF880562AF77BE500C9060E /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880552AF77BE500C9060E /* PokedexApp.swift */; };
@@ -38,6 +41,8 @@
 /* Begin PBXFileReference section */
 		CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2BAC052BBAF1BB002042C0 /* PokedexKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PokedexKit; sourceTree = "<group>"; };
+		CE2BAC082BBAF351002042C0 /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
+		CE2BAC0D2BBAF49E002042C0 /* AppDetailColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
 		CECB59972AF780F600847D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEF880522AF77BE500C9060E /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF880552AF77BE500C9060E /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECB59932AF77F9F00847D5F /* ComposableArchitecture in Frameworks */,
+				CE2BAC0C2BBAF40F002042C0 /* PokedexKit in Frameworks */,
 				CECB59962AF7804500847D5F /* PokemonAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +83,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE2BAC0A2BBAF40F002042C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE2BAC0F2BBAF796002042C0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BAC082BBAF351002042C0 /* AppSidebarList.swift */,
+				CE2BAC0D2BBAF49E002042C0 /* AppDetailColumn.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		CEF880492AF77BE500C9060E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,7 @@
 				CEF880672AF77BE600C9060E /* PokedexTests */,
 				CEF880712AF77BE600C9060E /* PokedexUITests */,
 				CEF880532AF77BE500C9060E /* Products */,
+				CE2BAC0A2BBAF40F002042C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +127,7 @@
 				CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */,
 				CEF880552AF77BE500C9060E /* PokedexApp.swift */,
 				CEF880572AF77BE500C9060E /* ContentView.swift */,
+				CE2BAC0F2BBAF796002042C0 /* Navigation */,
 				CECB59972AF780F600847D5F /* Info.plist */,
 				CEF8805D2AF77BE600C9060E /* Preview Content */,
 			);
@@ -154,6 +178,7 @@
 			packageProductDependencies = (
 				CECB59922AF77F9F00847D5F /* ComposableArchitecture */,
 				CECB59952AF7804500847D5F /* PokemonAPI */,
+				CE2BAC0B2BBAF40F002042C0 /* PokedexKit */,
 			);
 			productName = Pokedex;
 			productReference = CEF880522AF77BE500C9060E /* Pokedex.app */;
@@ -275,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF880582AF77BE500C9060E /* ContentView.swift in Sources */,
+				CE2BAC092BBAF351002042C0 /* AppSidebarList.swift in Sources */,
+				CE2BAC0E2BBAF49E002042C0 /* AppDetailColumn.swift in Sources */,
 				CEF880562AF77BE500C9060E /* PokedexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +655,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE2BAC0B2BBAF40F002042C0 /* PokedexKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PokedexKit;
+		};
 		CECB59922AF77F9F00847D5F /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CECB59912AF77F9F00847D5F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
