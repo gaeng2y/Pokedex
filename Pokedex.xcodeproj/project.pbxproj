@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2BAC042BBAF0CF002042C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */; };
 		CECB59932AF77F9F00847D5F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CECB59922AF77F9F00847D5F /* ComposableArchitecture */; };
 		CECB59962AF7804500847D5F /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = CECB59952AF7804500847D5F /* PokemonAPI */; };
 		CEF880562AF77BE500C9060E /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880552AF77BE500C9060E /* PokedexApp.swift */; };
 		CEF880582AF77BE500C9060E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880572AF77BE500C9060E /* ContentView.swift */; };
-		CEF8805A2AF77BE500C9060E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880592AF77BE500C9060E /* Item.swift */; };
-		CEF8805C2AF77BE600C9060E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF8805B2AF77BE600C9060E /* Assets.xcassets */; };
 		CEF8805F2AF77BE600C9060E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF8805E2AF77BE600C9060E /* Preview Assets.xcassets */; };
 		CEF880692AF77BE600C9060E /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880682AF77BE600C9060E /* PokedexTests.swift */; };
 		CEF880732AF77BE600C9060E /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880722AF77BE600C9060E /* PokedexUITests.swift */; };
@@ -37,12 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE2BAC052BBAF1BB002042C0 /* PokedexKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PokedexKit; sourceTree = "<group>"; };
 		CECB59972AF780F600847D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEF880522AF77BE500C9060E /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF880552AF77BE500C9060E /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
 		CEF880572AF77BE500C9060E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CEF880592AF77BE500C9060E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		CEF8805B2AF77BE600C9060E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF8805E2AF77BE600C9060E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CEF880642AF77BE600C9060E /* PokedexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF880682AF77BE600C9060E /* PokedexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTests.swift; sourceTree = "<group>"; };
@@ -81,7 +80,8 @@
 		CEF880492AF77BE500C9060E = {
 			isa = PBXGroup;
 			children = (
-				CEF880542AF77BE500C9060E /* Pokedex */,
+				CEF880542AF77BE500C9060E /* App */,
+				CE2BAC052BBAF1BB002042C0 /* PokedexKit */,
 				CEF880672AF77BE600C9060E /* PokedexTests */,
 				CEF880712AF77BE600C9060E /* PokedexUITests */,
 				CEF880532AF77BE500C9060E /* Products */,
@@ -98,17 +98,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEF880542AF77BE500C9060E /* Pokedex */ = {
+		CEF880542AF77BE500C9060E /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CECB59972AF780F600847D5F /* Info.plist */,
+				CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */,
 				CEF880552AF77BE500C9060E /* PokedexApp.swift */,
 				CEF880572AF77BE500C9060E /* ContentView.swift */,
-				CEF880592AF77BE500C9060E /* Item.swift */,
-				CEF8805B2AF77BE600C9060E /* Assets.xcassets */,
+				CECB59972AF780F600847D5F /* Info.plist */,
 				CEF8805D2AF77BE600C9060E /* Preview Content */,
 			);
-			path = Pokedex;
+			path = App;
 			sourceTree = "<group>";
 		};
 		CEF8805D2AF77BE600C9060E /* Preview Content */ = {
@@ -249,8 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2BAC042BBAF0CF002042C0 /* Assets.xcassets in Resources */,
 				CEF8805F2AF77BE600C9060E /* Preview Assets.xcassets in Resources */,
-				CEF8805C2AF77BE600C9060E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF880582AF77BE500C9060E /* ContentView.swift in Sources */,
-				CEF8805A2AF77BE500C9060E /* Item.swift in Sources */,
 				CEF880562AF77BE500C9060E /* PokedexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,11 +438,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Pokedex/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -470,11 +468,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Pokedex/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
