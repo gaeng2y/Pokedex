@@ -15,7 +15,7 @@ public enum Region: Codable, Hashable, Identifiable, CaseIterable {
     case paldea
     
     public var id: Region { self }
-    var regionName: String {
+    public var regionName: String {
         let region: String.LocalizationValue = switch self {
         case .kanto: "Kanto"
         case .johto: "Johto"

@@ -17,7 +17,7 @@ struct AppSidebarList: View {
                 region.label
             }
         }
-        .navigationTitle("Pokedex")
+        .navigationTitle("Region")
     }
 }
 

@@ -1,29 +1,35 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
-    "Pokedex" : {
-      "extractionState" : "manual",
+    "Pokemon" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pokedex"
+            "value" : "Pokemon"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "포켓몬 도감"
+            "value" : "포켓몬"
           }
         }
       }
     },
-    "Pokemon" : {
+    "Region" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Region"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "포켓몬"
+            "value" : "지방"
           }
         }
       }

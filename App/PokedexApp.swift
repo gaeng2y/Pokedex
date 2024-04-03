@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct PokedexApp: App {
+    private let pokemonApi: PokemonApiImpl = PokemonApi()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(pokemonApi: pokemonApi)
         }
     }
 }

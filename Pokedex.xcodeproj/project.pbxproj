@@ -13,6 +13,8 @@
 		CE2BAC0E2BBAF49E002042C0 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC0D2BBAF49E002042C0 /* AppDetailColumn.swift */; };
 		CE2BAC112BBAFE51002042C0 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CE2BAC102BBAFE51002042C0 /* Localizable.xcstrings */; };
 		CE2BAC122BBD8CC8002042C0 /* PokedexKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = CE2BAC0B2BBAF40F002042C0 /* PokedexKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE2BAC192BBDB8AB002042C0 /* PokemonApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC182BBDB8AB002042C0 /* PokemonApiImpl.swift */; };
+		CE2BAC1B2BBDB949002042C0 /* PokemonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC1A2BBDB949002042C0 /* PokemonApi.swift */; };
 		CECB59962AF7804500847D5F /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = CECB59952AF7804500847D5F /* PokemonAPI */; };
 		CEF880562AF77BE500C9060E /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880552AF77BE500C9060E /* PokedexApp.swift */; };
 		CEF880582AF77BE500C9060E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880572AF77BE500C9060E /* ContentView.swift */; };
@@ -59,6 +61,8 @@
 		CE2BAC082BBAF351002042C0 /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
 		CE2BAC0D2BBAF49E002042C0 /* AppDetailColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
 		CE2BAC102BBAFE51002042C0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		CE2BAC182BBDB8AB002042C0 /* PokemonApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApiImpl.swift; sourceTree = "<group>"; };
+		CE2BAC1A2BBDB949002042C0 /* PokemonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApi.swift; sourceTree = "<group>"; };
 		CECB59972AF780F600847D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEF880522AF77BE500C9060E /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF880552AF77BE500C9060E /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		CE2BAC152BBDB6F6002042C0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BAC182BBDB8AB002042C0 /* PokemonApiImpl.swift */,
+				CE2BAC1A2BBDB949002042C0 /* PokemonApi.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		CEF880492AF77BE500C9060E = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 				CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */,
 				CEF880552AF77BE500C9060E /* PokedexApp.swift */,
 				CEF880572AF77BE500C9060E /* ContentView.swift */,
+				CE2BAC152BBDB6F6002042C0 /* Network */,
 				CE2BAC0F2BBAF796002042C0 /* Navigation */,
 				CEF8805D2AF77BE600C9060E /* Preview Content */,
 			);
@@ -314,9 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2BAC1B2BBDB949002042C0 /* PokemonApi.swift in Sources */,
 				CEF880582AF77BE500C9060E /* ContentView.swift in Sources */,
 				CE2BAC092BBAF351002042C0 /* AppSidebarList.swift in Sources */,
 				CE2BAC0E2BBAF49E002042C0 /* AppDetailColumn.swift in Sources */,
+				CE2BAC192BBDB8AB002042C0 /* PokemonApiImpl.swift in Sources */,
 				CEF880562AF77BE500C9060E /* PokedexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +513,9 @@
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = gaeng2y.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,6 +546,9 @@
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = gaeng2y.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

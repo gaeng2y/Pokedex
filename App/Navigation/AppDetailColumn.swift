@@ -10,23 +10,30 @@ import PokemonAPI
 import SwiftUI
 
 struct AppDetailColumn: View {
+    @State var pokemonEntries: [PKMPokemonEntry]? = []
+    let pokemonApi: PokemonApiImpl
     var region: Region?
     
     var body: some View {
         Text("테스트")
-            .onAppear {
-                Task {
-                    // 1로 entries count 가져와서 species 로 이름 가져오기
-                    let pokedex = try await PokemonAPI().gameService.fetchPokedex(1)
-                    print(pokedex.name) // kalos-mountain
-                    pokedex.pokemonEntries?.forEach {
-                        print($0.pokemonSpecies?.name)
-                    }
-                }
+            .task {
+                await fetchPokemon()
             }
+            .navigationTitle(region?.regionName ?? Region.kanto.regionName)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    private func fetchPokemon() async {
+        // 1로 entries count 가져와서 species 로 이름 가져오기
+        do {
+            pokemonEntries = try await pokemonApi.fetchPokedexEntries(with: 1)
+            print(pokemonEntries)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 
 #Preview {
-    AppDetailColumn(region: .kanto)
+    AppDetailColumn(pokemonApi: PokemonApi(), region: .kanto)
 }
