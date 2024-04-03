@@ -19,6 +19,7 @@ struct ContentView: View {
         } detail: {
             AppDetailColumn(region: selection)
         }
+        .navigationTitle("Pokemon")
     }
 }
 

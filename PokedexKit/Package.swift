@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "PokedexKit",
-    defaultLocalization: "kr",
+    defaultLocalization: "ko",
     platforms: [
         .iOS(.v17),
         .macOS(.v14),
@@ -16,6 +16,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "PokedexKit",
+            type: .dynamic,
             targets: ["PokedexKit"]),
     ],
     targets: [
@@ -23,7 +24,6 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "PokedexKit",
-            dependencies: [],
             path: "Sources"),
         .testTarget(
             name: "PokedexKitTests",

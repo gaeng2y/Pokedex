@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "Pokedex" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokedex"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포켓몬 도감"
+          }
+        }
+      }
+    },
+    "Pokemon" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포켓몬"
+          }
+        }
+      }
+    },
+    "테스트" : {
+
+    }
+  },
+  "version" : "1.0"
+}

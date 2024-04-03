@@ -1,0 +1,96 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Alola" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알로라지방"
+          }
+        }
+      }
+    },
+    "Galar" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가라르지방"
+          }
+        }
+      }
+    },
+    "Hoenn" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호연지방"
+          }
+        }
+      }
+    },
+    "Johto" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "성도지방"
+          }
+        }
+      }
+    },
+    "Kalos" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "칼로스지방"
+          }
+        }
+      }
+    },
+    "Kanto" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "관동지방"
+          }
+        }
+      }
+    },
+    "Paldea" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "팔데아지방"
+          }
+        }
+      }
+    },
+    "Sinnoh" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "신오지방"
+          }
+        }
+      }
+    },
+    "Unova" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하나지방"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
