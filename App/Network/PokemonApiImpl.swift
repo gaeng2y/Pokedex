@@ -9,5 +9,5 @@ import PokemonAPI
 import Foundation
 
 public protocol PokemonApiImpl {
-    func fetchPokedexEntries(with pokedexId: Int) async throws -> [PKMPokemonEntry]?
+    func fetchPokedex(with pokedexId: Int) async throws -> PKMPokedex
 }

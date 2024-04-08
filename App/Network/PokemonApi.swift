@@ -9,8 +9,7 @@ import PokemonAPI
 import Foundation
 
 public struct PokemonApi: PokemonApiImpl {
-    public func fetchPokedexEntries(with pokedexId: Int) async throws -> [PKMPokemonEntry]? {
-        let pokedex = try await PokemonAPI().gameService.fetchPokedex(pokedexId)
-        return pokedex.pokemonEntries
+    public func fetchPokedex(with pokedexId: Int) async throws -> PKMPokedex {
+        try await PokemonAPI().gameService.fetchPokedex(pokedexId)
     }
 }
