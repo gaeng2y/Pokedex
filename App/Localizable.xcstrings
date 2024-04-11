@@ -1,23 +1,6 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
-    "Pokemon" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pokemon"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "포켓몬"
-          }
-        }
-      }
-    },
     "Region" : {
       "localizations" : {
         "en" : {

@@ -5,22 +5,22 @@
 //  Created by Kyeongmo Yang on 4/8/24.
 //
 
+import PokedexKit
 import SwiftUI
 
 struct PokemonGallery: View {
-    @State private var searchText = ""
     let pokemonApi: PokemonApiImpl
+    let region: Region
     
     var body: some View {
         GeometryReader { geometryProxy in
             ScrollView {
-                PokemonGrid(pokemonApi: pokemonApi)
+                PokemonGrid(pokemonApi: pokemonApi, region: region)
             }
         }
-        .searchable(text: $searchText)
     }
 }
 
 #Preview {
-    PokemonGallery(pokemonApi: PokemonApi())
+    PokemonGallery(pokemonApi: PokemonApi(), region: .kanto)
 }

@@ -11,12 +11,14 @@ import SwiftUI
 
 struct AppDetailColumn: View {
     let pokemonApi: PokemonApiImpl
-    var region: Region?
+    var region: Region? = .kanto
     
     var body: some View {
-        PokemonGallery(pokemonApi: pokemonApi)
-            .navigationTitle(region?.regionName ?? Region.kanto.regionName)
-            .navigationBarTitleDisplayMode(.large)
+        if let region {
+            PokemonGallery(pokemonApi: pokemonApi, region: region)
+                .navigationTitle(region.regionName)
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
