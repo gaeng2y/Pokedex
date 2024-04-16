@@ -11,14 +11,18 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Region? = .kanto
+    @State private var path = NavigationPath()
     let pokemonApi: PokemonApiImpl
+    
     
     var body: some View {
         // 나머지는 SplitView
         NavigationSplitView {
             AppSidebarList(selection: $selection)
         } detail: {
-            AppDetailColumn(pokemonApi: pokemonApi, region: selection)
+            NavigationStack(path: $path) {
+                AppDetailColumn(pokemonApi: pokemonApi, region: selection)
+            }            
         }
     }
 }

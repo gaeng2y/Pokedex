@@ -17,6 +17,7 @@
 		CE2BAC1B2BBDB949002042C0 /* PokemonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC1A2BBDB949002042C0 /* PokemonApi.swift */; };
 		CE2BAC1F2BC41DA8002042C0 /* PokemonGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC1E2BC41DA8002042C0 /* PokemonGrid.swift */; };
 		CE2BAC212BC4269B002042C0 /* PokemonGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC202BC4269A002042C0 /* PokemonGallery.swift */; };
+		CE2BAC232BC58163002042C0 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BAC222BC58163002042C0 /* PokemonView.swift */; };
 		CECB59962AF7804500847D5F /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = CECB59952AF7804500847D5F /* PokemonAPI */; };
 		CEF880562AF77BE500C9060E /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880552AF77BE500C9060E /* PokedexApp.swift */; };
 		CEF880582AF77BE500C9060E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF880572AF77BE500C9060E /* ContentView.swift */; };
@@ -67,6 +68,7 @@
 		CE2BAC1A2BBDB949002042C0 /* PokemonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApi.swift; sourceTree = "<group>"; };
 		CE2BAC1E2BC41DA8002042C0 /* PokemonGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGrid.swift; sourceTree = "<group>"; };
 		CE2BAC202BC4269A002042C0 /* PokemonGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGallery.swift; sourceTree = "<group>"; };
+		CE2BAC222BC58163002042C0 /* PokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
 		CECB59972AF780F600847D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEF880522AF77BE500C9060E /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF880552AF77BE500C9060E /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		CE2BAC0F2BBAF796002042C0 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				CEF880572AF77BE500C9060E /* ContentView.swift */,
 				CE2BAC082BBAF351002042C0 /* AppSidebarList.swift */,
 				CE2BAC0D2BBAF49E002042C0 /* AppDetailColumn.swift */,
 			);
@@ -129,6 +132,16 @@
 				CE2BAC1A2BBDB949002042C0 /* PokemonApi.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CECA3E3B2BCD346C001C6665 /* PekemonEntire */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BAC202BC4269A002042C0 /* PokemonGallery.swift */,
+				CE2BAC1E2BC41DA8002042C0 /* PokemonGrid.swift */,
+				CE2BAC222BC58163002042C0 /* PokemonView.swift */,
+			);
+			path = PekemonEntire;
 			sourceTree = "<group>";
 		};
 		CEF880492AF77BE500C9060E = {
@@ -160,9 +173,7 @@
 				CE2BAC102BBAFE51002042C0 /* Localizable.xcstrings */,
 				CE2BAC032BBAF0CF002042C0 /* Assets.xcassets */,
 				CEF880552AF77BE500C9060E /* PokedexApp.swift */,
-				CEF880572AF77BE500C9060E /* ContentView.swift */,
-				CE2BAC1E2BC41DA8002042C0 /* PokemonGrid.swift */,
-				CE2BAC202BC4269A002042C0 /* PokemonGallery.swift */,
+				CECA3E3B2BCD346C001C6665 /* PekemonEntire */,
 				CE2BAC152BBDB6F6002042C0 /* Network */,
 				CE2BAC0F2BBAF796002042C0 /* Navigation */,
 				CEF8805D2AF77BE600C9060E /* Preview Content */,
@@ -264,7 +275,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					CEF880512AF77BE500C9060E = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -284,8 +295,8 @@
 			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				ko,
+				en,
 			);
 			mainGroup = CEF880492AF77BE500C9060E;
 			packageReferences = (
@@ -337,6 +348,7 @@
 				CE2BAC212BC4269B002042C0 /* PokemonGallery.swift in Sources */,
 				CE2BAC1B2BBDB949002042C0 /* PokemonApi.swift in Sources */,
 				CEF880582AF77BE500C9060E /* ContentView.swift in Sources */,
+				CE2BAC232BC58163002042C0 /* PokemonView.swift in Sources */,
 				CE2BAC092BBAF351002042C0 /* AppSidebarList.swift in Sources */,
 				CE2BAC0E2BBAF49E002042C0 /* AppDetailColumn.swift in Sources */,
 				CE2BAC1F2BC41DA8002042C0 /* PokemonGrid.swift in Sources */,
@@ -383,6 +395,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -446,6 +459,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -17,23 +17,17 @@ public enum Region: Codable, Hashable, Identifiable, CaseIterable {
     public var id: Int {
         switch self {
         case .kanto: 2
-        case .johto: 
-        case .hoenn:
-            <#code#>
-        case .sinnoh:
-            <#code#>
-        case .unova:
-            <#code#>
-        case .kalos:
-            <#code#>
-        case .alola:
-            <#code#>
-        case .galar:
-            <#code#>
-        case .paldea:
-            <#code#>
+        case .johto: 3
+        case .hoenn: 4
+        case .sinnoh: 5
+        case .unova: 8
+        case .kalos: 12
+        case .alola: 16
+        case .galar: 27
+        case .paldea: 31
         }
     }
+    
     public var regionName: String {
         let region: String.LocalizationValue = switch self {
         case .kanto: "Kanto"
