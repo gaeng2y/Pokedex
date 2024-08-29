@@ -18,7 +18,9 @@ let project = Project(
             ),
             sources: ["Pokedex/Sources/**"],
             resources: ["Pokedex/Resources/**"],
-            dependencies: []
+            dependencies: [
+                .external(name: "ComposableArchitecture")
+            ]
         ),
         .target(
             name: "PokedexTests",
