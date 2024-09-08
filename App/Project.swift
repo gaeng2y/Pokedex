@@ -19,10 +19,10 @@ let project = Project(
     targets: [
         .target(
             name: "Pokedex",
-            destinations: .iOS,
+            destinations: [.iPhone, .iPad, .mac],
             product: .app,
             bundleId: "com.gaeng2y.Pokedex",
-            deploymentTargets: .iOS("17.0"),
+            deploymentTargets: .multiplatform(iOS: "17.0", macOS: "14.0"),
             infoPlist: .extendingDefault(
                 with: [
                   "CFBundleExecutable": "$(EXECUTABLE_NAME)",
@@ -39,12 +39,17 @@ let project = Project(
             sources: ["Sources/**"],
             resources: ["../Resources/**"],
             dependencies: [
+                .project(target: "PokemonList", path: .relativeToRoot("Features/PokemonList")),
+                .project(target: "Utils",  path: .relativeToRoot("Share/Utils")),
+                .project(target: "Networking",  path: .relativeToRoot("Core/Networking")),
+                .project(target: "Repository",  path: .relativeToRoot("Core/Repository")),
+                .project(target: "DependencyInjection",  path: .relativeToRoot("DependencyInjection")),
                 .external(name: "ComposableArchitecture")
             ]
         ),
         .target(
             name: "PokedexTests",
-            destinations: .iOS,
+            destinations: [.iPhone, .iPad, .mac],
             product: .unitTests,
             bundleId: "com.gaeng2y.PokedexTests",
             infoPlist: .default,
