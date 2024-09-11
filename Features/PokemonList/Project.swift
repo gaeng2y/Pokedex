@@ -9,19 +9,6 @@ import ProjectDescription
 
 let projectName = "PokemonList"
 let moduleBaseBundleId = "com.gaeng2y.Pokedex.PokemonList"
-let baseInfoPlist: InfoPlist = .extendingDefault(
-    with: [
-        "CFBundleExecutable": "$(EXECUTABLE_NAME)",
-        "CFBundleInfoDictionaryVersion": "0.1.0",
-        "CFBundlePackageType": "APPL",
-        "CFBundleName": "$(PRODUCT_NAME)",
-        "CFBundleIdentifier": "$(PRODUCT_BUNDLE_IDENTIFIER)",
-        "CFBundleVersion": "1",
-        "CFBundleShortVersionString": "0.1.0",
-        "UILaunchStoryboardName": "LaunchScreen",
-        "UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait"
-    ]
-)
 
 let project = Project(
     name: "PokemonList",
@@ -42,11 +29,11 @@ let project = Project(
     targets: [
         .target(
             name: projectName,
-            destinations: [.iPhone, .iPad, .mac],
+            destinations: [.iPhone, .iPad],
             product: .staticFramework,
             bundleId: moduleBaseBundleId,
-            deploymentTargets: .multiplatform(iOS: "17.0", macOS: "14.0"),
-            infoPlist: baseInfoPlist,
+            deploymentTargets: .iOS("17.0"),
+            infoPlist: .default,
             sources: ["Sources/**"],
             resources: ["../../Resources/**"],
             dependencies: [
@@ -58,21 +45,21 @@ let project = Project(
         ),
         .target(
             name: "\(projectName)Interface",
-            destinations: [.iPhone, .iPad, .mac],
+            destinations: [.iPhone, .iPad],
             product: .framework,
             bundleId: "\(moduleBaseBundleId).interface",
-            deploymentTargets: .multiplatform(iOS: "17.0", macOS: "14.0"),
-            infoPlist: baseInfoPlist,
+            deploymentTargets: .iOS("17.0"),
+            infoPlist: .default,
             sources: ["Interface/**"],
             dependencies: []
         ),
         .target(
             name: "\(projectName)Tests",
-            destinations: [.iPhone, .iPad, .mac],
+            destinations: [.iPhone, .iPad],
             product: .unitTests,
             bundleId: "\(moduleBaseBundleId).tests",
-            deploymentTargets: .multiplatform(iOS: "17.0", macOS: "14.0"),
-            infoPlist: baseInfoPlist,
+            deploymentTargets: .iOS("17.0"),
+            infoPlist: .default,
             sources: ["Tests/**"],
             dependencies: [
                 .target(name: projectName),
@@ -81,11 +68,11 @@ let project = Project(
         ),
         .target(
             name: "\(projectName)Demo",
-            destinations: [.iPhone, .iPad, .mac],
+            destinations: [.iPhone, .iPad],
             product: .app,
             bundleId: "\(moduleBaseBundleId).Demo",
-            deploymentTargets: .multiplatform(iOS: "17.0", macOS: "14.0"),
-            infoPlist: baseInfoPlist,
+            deploymentTargets: .iOS("17.0"),
+            infoPlist: .default,
             sources: ["Demo/Sources/**"],
             dependencies: [
                 .target(name: projectName)

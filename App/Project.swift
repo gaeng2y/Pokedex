@@ -1,7 +1,17 @@
 import ProjectDescription
 
+let infoPlist: [String: Plist.Value] = [
+    "UILaunchStoryboardName":"LaunchScreen",
+    "CFBundleVersion": "1"
+]
+
 let project = Project(
     name: "Pokedex",
+    
+    options: .options(
+        defaultKnownRegions: ["ko"],
+        developmentRegion: "ko"
+    ),
     settings: .settings(
         configurations: [
             .debug(
@@ -19,23 +29,11 @@ let project = Project(
     targets: [
         .target(
             name: "Pokedex",
-            destinations: [.iPhone, .iPad, .mac],
+            destinations: [.iPhone, .iPad],
             product: .app,
             bundleId: "com.gaeng2y.Pokedex",
-            deploymentTargets: .multiplatform(iOS: "17.0", macOS: "14.0"),
-            infoPlist: .extendingDefault(
-                with: [
-                  "CFBundleExecutable": "$(EXECUTABLE_NAME)",
-                  "CFBundleInfoDictionaryVersion": "0.1.0",
-                  "CFBundlePackageType": "APPL",
-                  "CFBundleName": "$(PRODUCT_NAME)",
-                  "CFBundleIdentifier": "$(PRODUCT_BUNDLE_IDENTIFIER)",
-                  "CFBundleVersion": "1",
-                  "CFBundleShortVersionString": "0.1.0",
-                  "UILaunchStoryboardName": "LaunchScreen",
-                  "UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait"
-                ]
-            ),
+            deploymentTargets: .iOS("17.0"),
+            infoPlist: .extendingDefault(with: infoPlist),
             sources: ["Sources/**"],
             resources: ["../Resources/**"],
             dependencies: [
@@ -49,7 +47,7 @@ let project = Project(
         ),
         .target(
             name: "PokedexTests",
-            destinations: [.iPhone, .iPad, .mac],
+            destinations: [.iPhone, .iPad],
             product: .unitTests,
             bundleId: "com.gaeng2y.PokedexTests",
             infoPlist: .default,

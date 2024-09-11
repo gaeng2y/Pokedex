@@ -29,23 +29,11 @@ let project = Project(
     targets: [
         .target(
             name: projectName,
-            destinations: [.iPhone, .iPad, .mac],
+            destinations: [.iPhone, .iPad],
             product: .staticFramework,
             bundleId: moduleBaseBundleId,
-            deploymentTargets: .multiplatform(iOS: "17.0", macOS: "14.0"),
-            infoPlist: .extendingDefault(
-                with: [
-                    "CFBundleExecutable": "$(EXECUTABLE_NAME)",
-                    "CFBundleInfoDictionaryVersion": "0.1.0",
-                    "CFBundlePackageType": "APPL",
-                    "CFBundleName": "$(PRODUCT_NAME)",
-                    "CFBundleIdentifier": "$(PRODUCT_BUNDLE_IDENTIFIER)",
-                    "CFBundleVersion": "1",
-                    "CFBundleShortVersionString": "0.1.0",
-                    "UILaunchStoryboardName": "LaunchScreen",
-                    "UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait"
-                ]
-            ),
+            deploymentTargets: .iOS("17.0"),
+            infoPlist: .default,
             sources: ["Sources/**"],
             dependencies: [
                 .external(name: "ComposableArchitecture")

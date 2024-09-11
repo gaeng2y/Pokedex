@@ -8,7 +8,19 @@ import PackageDescription
         // Customize the product types for specific package product
         // Default is .staticFramework
         // productTypes: ["Alamofire": .framework,] 
-        productTypes: [:]
+        productTypes: [
+            "ComposableArchitecture": .framework
+        ],
+        baseSettings: .settings(
+            base: [
+                "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+            ],
+            configurations: [
+                .debug(name: .debug),
+                .release(name: .release)
+            ],
+            defaultSettings: .recommended
+        )
     )
 #endif
 
