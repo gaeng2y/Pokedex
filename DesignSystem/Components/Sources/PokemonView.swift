@@ -19,7 +19,7 @@ struct PokemonView: View {
                     .scaledToFit()
                     .frame(width: 100, height: 100)
             } placeholder: {
-                Image("Silhouette", bundle: .module)
+                Image(.silhouette)
             }
             
             Text(name)
