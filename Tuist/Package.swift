@@ -33,10 +33,6 @@ let package = Package(
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
             .upToNextMajor(from: "1.14.0")
-        ),
-        .package(
-            url: "https://github.com/kinkofer/PokemonAPI",
-            .upToNextMajor(from: "6.1.0")
         )
     ]
 )

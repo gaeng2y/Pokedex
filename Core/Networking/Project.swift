@@ -37,8 +37,7 @@ let project = Project(
             sources: ["Sources/**"],
             dependencies: [
                 .target(name: "\(projectName)Interface"),
-                .project(target: "Utils",  path: .relativeToRoot("Share/Utils")),
-                .external(name: "PokemonAPI")
+                .project(target: "Utils",  path: .relativeToRoot("Share/Utils"))
             ]
         ),
         .target(
