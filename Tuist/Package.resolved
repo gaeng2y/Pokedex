@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "pokemonapi",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kinkofer/PokemonAPI",
-      "state" : {
-        "revision" : "dfb4cfbf5f91798a5c37b031b913e21a74a06289",
-        "version" : "6.1.1"
-      }
-    },
-    {
       "identity" : "swift-case-paths",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-case-paths",
@@ -79,6 +70,15 @@
       "state" : {
         "revision" : "3ef38bb702a1a2f39c7e19fc0578403b8ee52b17",
         "version" : "1.3.9"
+      }
+    },
+    {
+      "identity" : "swift-http-types",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-http-types.git",
+      "state" : {
+        "revision" : "ae67c8178eb46944fd85e4dc6dd970e1f3ed6ccd",
+        "version" : "1.3.0"
       }
     },
     {
