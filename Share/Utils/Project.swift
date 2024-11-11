@@ -35,9 +35,7 @@ let project = Project(
             deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources: ["Sources/**"],
-            dependencies: [
-                .external(name: "HTTPTypes")
-            ]
+            dependencies: []
         )
     ],
     schemes: []

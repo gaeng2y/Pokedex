@@ -35,8 +35,8 @@ let package = Package(
             .upToNextMajor(from: "1.14.0")
         ),
         .package(
-            url: "https://github.com/apple/swift-http-types.git",
-            .upToNextMajor(from: "1.3.0")
+            url: "https://github.com/kinkofer/PokemonAPI.git",
+            .upToNextMajor(from: "6.1.0")
         )
     ]
 )
