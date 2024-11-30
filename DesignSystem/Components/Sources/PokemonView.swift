@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Utils
 
 struct PokemonView: View {
     let imageUrl: Optional<URL>
