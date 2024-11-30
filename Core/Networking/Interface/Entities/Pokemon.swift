@@ -11,4 +11,10 @@ public struct Pokemon: Identifiable {
     public let id: Int?
     public let name: String?
     public let spriteUrl: String?
+    
+    public init(id: Int?, name: String?, spriteUrl: String?) {
+        self.id = id
+        self.name = name
+        self.spriteUrl = spriteUrl
+    }
 }
